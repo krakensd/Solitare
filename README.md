@@ -2,8 +2,6 @@
 
 # Classic Solitaire
 
-### PLAY: 
->### https://ctoy-solitaire.netlify.app
 
 
 
