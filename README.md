@@ -1,5 +1,3 @@
-# Solitare
-
 # Classic Solitaire
 
 
