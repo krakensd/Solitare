@@ -1,0 +1,89 @@
+*,*::before, *::after {
+    box-sizing: border-box; 
+    padding: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1{
+    color: antiquewhite;
+    text-align: center;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    font-size: 64px;
+}
+h1 div#win{
+    color:antiquewhite;
+}
+body{
+    background-image: url(https://github.com/ctoy17/Solitaire/blob/3a91a7a18d2f27c512ef089ad4f56b41e974028d/assets/background_2.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+}
+#table {
+    display: grid; 
+    grid-template-rows: 1fr 2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "topRow"
+    "tableau";
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+    max-height: 80vh;
+    margin-bottom: 0;
+}
+#table > div::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.topRow{
+    display: grid; 
+    grid-template-columns: auto auto auto auto; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    padding: 10px;
+    grid-template-areas: 
+    ". stock logo aces"; 
+    grid-area: topRow; 
+}
+.stock{
+    grid-template-areas: "draw waste";
+    grid-area: stock;
+}
+#draw { 
+    grid-area: draw;
+}
+#waste{
+    grid-area: waste;
+    background-color: rgb(213, 220, 222, .25);
+}
+#aces.aces { 
+    grid-area: aces; 
+}
+#table .tableau{
+    display: grid; 
+    grid-area: tableau;
+    grid-template-columns: auto auto;
+    grid-template-areas: ". stacks";
+    margin-top: 0px;
+    grid-template-rows: 2fr;
+}
+div#stack.stack{
+    grid-area: stacks;
+} 
+.highlight {
+    box-shadow: 0px 0px 10px .3vw rgb(255, 255, 255);
+} 
+#button{
+    background-color: antiquewhite;
+    width: fit-content;
+    margin-top: 60px;
+    font-size: 32px;
+}
